@@ -19,6 +19,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableWebMvc // 启用MVC
 public class SpringMvcXmlConfig extends WebMvcConfigurationSupport {
 
+
     /**
      * 定义MVC视图解析器
      * 因为要交给IOC实例化，所以加上@Bean注解
