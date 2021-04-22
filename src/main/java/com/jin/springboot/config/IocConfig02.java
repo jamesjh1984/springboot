@@ -1,5 +1,6 @@
 package com.jin.springboot.config;
 
+import com.jin.springboot.annotation.MyComponentScan;
 import com.jin.springboot.dao.AccountDao;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -13,9 +14,9 @@ import org.springframework.context.annotation.PropertySource;
  * @PropertySource：加载外部xxx.properties文件
  */
 @Configuration
-@ComponentScan("com.jin.springboot")
+@MyComponentScan("com.jin.springboot") //@ComponentScan("com.jin.springboot")
 @PropertySource(value = {"classpath:jdbc.properties"})
-public class IocConfig {
+public class IocConfig02 {
 
     // 获取外部xxx.properties文件的值
     @Value("${jdbc.driver}")

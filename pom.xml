@@ -20,10 +20,39 @@
 
   <dependencies>
 
+    <!-- spring -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
       <version>5.2.9.RELEASE</version>
+    </dependency>
+
+    <!-- spring-web -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>5.2.9.RELEASE</version>
+    </dependency>
+
+    <!-- spring-mvc -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>5.2.9.RELEASE</version>
+    </dependency>
+
+    <!-- spring-web -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>5.2.9.RELEASE</version>
+    </dependency>
+
+    <!-- web servlet -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.0</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
@@ -85,6 +114,14 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+
+        <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-maven-plugin -->
+<!--        <plugin>-->
+<!--          <groupId>org.eclipse.jetty</groupId>-->
+<!--          <artifactId>jetty-maven-plugin</artifactId>-->
+<!--          <version>9.4.28.v20200408</version>-->
+<!--        </plugin>-->
+
       </plugins>
     </pluginManagement>
   </build>
