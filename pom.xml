@@ -21,7 +21,7 @@
 
 
 
-  <!-- springboot parent, 必加 -->
+  <!-- 1. springboot parent, 必加 -->
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -32,7 +32,7 @@
 
   <dependencies>
 
-    <!-- spring -->
+    <!-- 2. spring-boot-starter-web -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
@@ -47,7 +47,7 @@
   <build>
       <plugins>
 
-        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+        <!-- 3. clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
