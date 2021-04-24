@@ -21,6 +21,8 @@
         <option value="AnnotationType" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -53,6 +55,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -61,18 +64,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springmvc_annotation" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/img" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.13213982" />
+    <property name="project.structure.side.proportion" value="0.17985612" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\static\img" />
+      <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\static\js" />
+      <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\webapp\WEB-INF\page" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\webapp" />
-      <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.jin.springboot" />
@@ -126,6 +131,8 @@
       <workItem from="1619074695276" duration="1053000" />
       <workItem from="1619081881167" duration="2148000" />
       <workItem from="1619158365689" duration="4019000" />
+      <workItem from="1619243332173" duration="9350000" />
+      <workItem from="1619254007637" duration="2279000" />
     </task>
     <servers />
   </component>

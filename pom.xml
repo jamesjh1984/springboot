@@ -16,7 +16,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
-    <springboot.version>2.4.4</springboot.version>
   </properties>
 
 
@@ -36,8 +35,34 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
-      <version>${springboot.version}</version>
     </dependency>
+
+
+
+
+    <!-- spring-boot-starter-freemarker -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-freemarker</artifactId>
+    </dependency>
+
+    <!-- spring-boot-starter-thymeleaf -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+
+<!--    &lt;!&ndash; spring-boot-starter-mail &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.boot</groupId>-->
+<!--      <artifactId>spring-boot-starter-mail</artifactId>-->
+<!--    </dependency>-->
+
+<!--    &lt;!&ndash; spring-boot-starter-aop &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.boot</groupId>-->
+<!--      <artifactId>spring-boot-starter-aop</artifactId>-->
+<!--    </dependency>-->
 
 
   </dependencies>
@@ -51,7 +76,7 @@
         <plugin>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
-          <version>${springboot.version}</version>
+          <version>2.4.4</version>
         </plugin>
 
       </plugins>
