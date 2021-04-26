@@ -20,9 +20,9 @@
       <list>
         <option value="AnnotationType" />
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,30 +64,32 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/img" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mybatis_mysql" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2173913" />
+    <property name="project.structure.side.proportion" value="0.122884475" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\thymeleaf-page" />
+      <recent name="D:\IT\Projects\GitHub\springboot\src\main\java\com\jin\springboot" />
+      <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\static\img" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\static\js" />
-      <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources" />
-      <recent name="D:\IT\Projects\GitHub\springboot\src\main\webapp\WEB-INF\page" />
-      <recent name="D:\IT\Projects\GitHub\springboot\src\main\webapp" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.jin.springboot" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.jin.springboot.controller" />
+      <recent name="com.jin.springboot.entity" />
+      <recent name="com.jin.springboot.mapper" />
       <recent name="com.jin.springboot.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.springboot_packaging">
+  <component name="RunManager" selected="Spring Boot.StartApplication">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -167,11 +169,24 @@
       <workItem from="1619158365689" duration="4019000" />
       <workItem from="1619243332173" duration="9350000" />
       <workItem from="1619254007637" duration="2279000" />
-      <workItem from="1619405367749" duration="5479000" />
+      <workItem from="1619405367749" duration="11974000" />
+      <workItem from="1619429288745" duration="3865000" />
+      <workItem from="1619433451816" duration="1218000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jin/springboot/StartApplication.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

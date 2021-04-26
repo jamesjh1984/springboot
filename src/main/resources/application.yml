@@ -26,6 +26,21 @@ spring:
 
 
 
+  #### c3p0数据源 ####
+  datasource:
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/james?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+#    url: jdbc:mysql://localhost:3306/james?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: jamesjh1984
+
+
+
+
+
+
+
 
 
 #### Logger的输出模式，级别，以及输出到指定文件 ####
@@ -36,6 +51,28 @@ spring:
 #  file:
 #    path: "."
 #    name: "springboot.log" #输出到当前目录
+
+
+
+
+
+#### Mybatis ####
+mybatis:
+  mapper-locations: classpath:/mybatis-mapper/*.xml
+  type-aliases-package: com.jin.springboot.entity
+  configuration:
+    map-underscore-to-camel-case: true # 下划线转驼峰命名
+
+
+
+
+#### Pagehelper分页 ####
+pagehelper:
+  helper-dialect: mysql
+
+
+
+
 
 
 
