@@ -5,13 +5,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-
+/**
+ * 用jar包方式部署
+ */
 @SpringBootApplication // SpringBoot入口类
 public class StartApplication {
 
     private static Logger logger = LoggerFactory.getLogger(StartApplication.class);
-
 
     public static void main( String[] args ) {
 
@@ -31,3 +34,25 @@ public class StartApplication {
 
     }
 }
+
+
+
+
+
+/**
+ * 用war包方式部署，忽略内嵌Tomcat
+ */
+//@SpringBootApplication // SpringBoot入口类
+//public class StartApplication extends SpringBootServletInitializer {
+//
+//    private static Logger logger = LoggerFactory.getLogger(StartApplication.class);
+//
+//    public static void main( String[] args ) {
+//        SpringApplication.run(StartApplication.class);
+//    }
+//
+//    @Override
+//    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+//        return builder.sources(StartApplication.class);
+//    }
+//}
