@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
+import springfox.documentation.oas.annotations.EnableOpenApi;
 
 
 /**
@@ -70,6 +71,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  */
 @SpringBootApplication // SpringBoot入口类
 @MapperScan("com.jin.springboot.mapper") // 运行的时候，给这些接口创建代理
+@EnableOpenApi // 开启Swagger2注解，http://localhost:8080/swagger-ui/index.html
 public class StartApplication {
 
     private static Logger logger = LoggerFactory.getLogger(StartApplication.class);

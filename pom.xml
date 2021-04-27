@@ -88,6 +88,26 @@
       <version>0.9.5.2</version>
     </dependency>
 
+    <!-- springfox-swagger2, 实现API文档生成功能，供前端开发调用 -->
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-boot-starter</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
+    <!-- springfox-swagger-ui -->
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger-ui</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
 
 
 

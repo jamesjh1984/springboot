@@ -2,6 +2,9 @@ package com.jin.springboot.controller;
 
 import com.jin.springboot.entity.Website;
 import com.jin.springboot.service.WebsiteService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +20,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/website")
+@Api(tags = "website API management")
 public class WebsiteController {
 
 
@@ -28,6 +32,7 @@ public class WebsiteController {
     // http://localhost:8080/website/getAll
     @RequestMapping("/getAll")
     @ResponseBody // 直接输出json，不跳转
+    @ApiOperation(value = "website API management => select all websites")
     public List<Website> getAll() {
         System.out.println("WebsiteController.getAll()");
         List<Website> websiteList = websiteService.getAll();
@@ -44,6 +49,8 @@ public class WebsiteController {
 //    @RequestMapping("/getById/{id}")
     @GetMapping("/getById/{id}")
     @ResponseBody // 直接输出json，不跳转
+    @ApiOperation(value = "website API management => select one website by id")
+    @ApiImplicitParam(name = "id", value = "website id", required = true, paramType = "path")
     public Website getById(@PathVariable Integer id) {
         System.out.println("WebsiteController.getById()");
         Website website = websiteService.getById(id);

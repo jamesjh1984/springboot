@@ -30,6 +30,7 @@ spring:
 
 
 
+
 #### c3p0数据源 ####
 c3p0:
   driverClass: com.mysql.cj.jdbc.Driver
@@ -86,7 +87,6 @@ mybatis:
 #### Pagehelper分页 ####
 pagehelper:
   helper-dialect: mysql
-
 
 
 

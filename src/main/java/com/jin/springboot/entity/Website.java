@@ -1,13 +1,25 @@
 package com.jin.springboot.entity;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.io.Serializable;
 
+@ApiModel(description = "website entity object")
 public class Website implements Serializable {
 
+    @ApiModelProperty(value = "website id primary key")
     private Integer id;
+
+    @ApiModelProperty(value = "website name")
     private String name;
+
+    @ApiModelProperty(value = "website url")
     private String url;
+
+    @ApiModelProperty(value = "website country")
     private String country;
+
 
 
     public Integer getId() {
