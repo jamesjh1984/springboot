@@ -1,1 +1,0 @@
-Hello, SpringBoot, this is FreeMarker generated.

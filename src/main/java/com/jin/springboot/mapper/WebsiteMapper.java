@@ -26,6 +26,4 @@ public interface WebsiteMapper {
 //    @Select("select id, name, url, country from website where id=#{id}")
     public Website getById(@Param("id") Integer id);
 
-
-
 }

@@ -73,10 +73,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class StartApplication {
 
     private static Logger logger = LoggerFactory.getLogger(StartApplication.class);
-//
-//    public static void main( String[] args ) {
-//        SpringApplication.run(StartApplication.class);
-//    }
 
 
     public static void main( String[] args ) {
