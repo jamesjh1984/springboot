@@ -5,7 +5,7 @@
     <title>Website Result</title>
 </head>
 <body>
-    <h1>Success</h1>
+    <h1>Success JSP</h1>
 
     <h4>All websites</h4>
     <table align="left" border="1">

@@ -110,6 +110,19 @@
 
 
 
+    <!-- 用于编译jsp，springboot tomcat jsp 支持开启-->
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-jasper</artifactId>
+    </dependency>
+    <!--jstl的支持,c标签-->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <scope>compile</scope>
+    </dependency>
+
+
 
 
     <!-- 用war包方式部署，忽略内嵌Tomcat -->

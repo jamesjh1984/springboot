@@ -26,6 +26,11 @@ spring:
 
 
 
+  #### JSP ####
+  mvc:
+    view:
+      prefix: classpath:/jsp/
+      suffix: .jsp
 
 
 

@@ -71,24 +71,24 @@ public class WebsiteController {
      * 以下是跳转页面的代码，还没解决
      */
 
-//    // http://localhost:8080/website/getAll02, 暂时还没解决跳转取值的问题
-//    @RequestMapping("/getAll02")
-//    public String getAll02(HttpServletRequest request) {
-//        System.out.println("WebsiteController.getAll02()");
-//
-//        List<Website> websiteList = websiteService.getAll();
-//        System.out.println("websiteList => " + websiteList);
-//
-//        request.setAttribute("websiteList", websiteList);
-//        return "success.html"; // success.html
-//    }
-//
-//
-//
-//
-//
-//
-//
+    // http://localhost:8080/website/getAll02, 暂时还没解决跳转取值的问题
+    @RequestMapping("/getAll02")
+    public String getAll02(HttpServletRequest request) {
+        System.out.println("WebsiteController.getAll02()");
+
+        List<Website> websiteList = websiteService.getAll();
+        System.out.println("websiteList => " + websiteList);
+
+        request.setAttribute("websiteList", websiteList);
+        return "getAllSuccess"; // getAllSuccess.jsp
+    }
+
+
+
+
+
+
+
 //    // add one row, and return this row to addSuccess.jsp
 //    @RequestMapping("/add")
 //    public String add(Website website, HttpServletRequest request) {

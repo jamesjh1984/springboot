@@ -65,20 +65,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/thymeleaf-page" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springmvc_annotation" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.22241835" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\webjars" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\thymeleaf-page" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\java\com\jin\springboot" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\static\img" />
-      <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\static\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\jsp" />
@@ -94,13 +94,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.StartApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -175,6 +177,7 @@
       <workItem from="1619429288745" duration="3865000" />
       <workItem from="1619433451816" duration="1218000" />
       <workItem from="1619490974950" duration="15876000" />
+      <workItem from="1619577315655" duration="15368000" />
     </task>
     <servers />
   </component>

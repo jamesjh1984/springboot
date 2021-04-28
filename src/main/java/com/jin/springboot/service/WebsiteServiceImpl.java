@@ -1,4 +1,4 @@
-package com.jin.springboot.service.impl;
+package com.jin.springboot.service;
 
 import com.jin.springboot.entity.Website;
 import com.jin.springboot.mapper.WebsiteMapper;
