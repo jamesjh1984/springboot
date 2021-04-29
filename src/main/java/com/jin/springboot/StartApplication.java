@@ -1,6 +1,7 @@
 package com.jin.springboot;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.zaxxer.hikari.HikariDataSource;
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -78,8 +79,12 @@ public class StartApplication {
 
 
     public static void main( String[] args ) {
+
         ConfigurableApplicationContext run = SpringApplication.run(StartApplication.class, args);
-        ComboPooledDataSource bean = run.getBean(ComboPooledDataSource.class);
+
+//        ComboPooledDataSource bean = run.getBean(ComboPooledDataSource.class); // c3p0
+        HikariDataSource bean = run.getBean(HikariDataSource.class); // Hikari
         System.out.println(bean);
     }
+
 }

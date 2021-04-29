@@ -94,15 +94,45 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.StartApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestWebsiteServiceImpl.testgetAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jin.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jin.springboot" />
+      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.TestWebsiteServiceImpl" />
+      <option name="METHOD_NAME" value="testgetAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestWebsiteServiceImpl.testgetById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jin.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jin.springboot" />
+      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.TestWebsiteServiceImpl" />
+      <option name="METHOD_NAME" value="testgetById" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -151,10 +181,14 @@
     <list>
       <item itemvalue="Maven.springboot_packaging" />
       <item itemvalue="Spring Boot.StartApplication" />
+      <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetAll" />
+      <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetById" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.StartApplication" />
+        <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetAll" />
+        <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetById" />
       </list>
     </recent_temporary>
   </component>
@@ -177,23 +211,14 @@
       <workItem from="1619429288745" duration="3865000" />
       <workItem from="1619433451816" duration="1218000" />
       <workItem from="1619490974950" duration="15876000" />
-      <workItem from="1619577315655" duration="15368000" />
+      <workItem from="1619577315655" duration="16505000" />
+      <workItem from="1619664509662" duration="145000" />
+      <workItem from="1619664706913" duration="8881000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/jin/springboot/StartApplication.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
