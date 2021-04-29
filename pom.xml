@@ -131,6 +131,8 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
+      <!-- must be 4.12 or above -->
+      <version>4.13</version>
       <scope>test</scope>
     </dependency>
 
