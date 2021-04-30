@@ -84,6 +84,7 @@
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\jsp" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.jin.springboot.service" />
       <recent name="com.jin.springboot" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -93,14 +94,48 @@
       <recent name="com.jin.springboot.mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestWebsiteServiceImpl.testgetById">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestWebsiteController.test01">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestWebsiteController.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jin.springboot.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jin.springboot.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.controller.TestWebsiteController" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestWebsiteController.testgetById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jin.springboot.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jin.springboot.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.controller.TestWebsiteController" />
+      <option name="METHOD_NAME" value="testgetById" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,12 +144,12 @@
       <module name="springboot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jin.springboot.*" />
+          <option name="PATTERN" value="com.jin.springboot.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.jin.springboot" />
-      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.TestWebsiteServiceImpl" />
+      <option name="PACKAGE_NAME" value="com.jin.springboot.service" />
+      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.service.TestWebsiteServiceImpl" />
       <option name="METHOD_NAME" value="testgetAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -125,12 +160,12 @@
       <module name="springboot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jin.springboot.*" />
+          <option name="PATTERN" value="com.jin.springboot.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.jin.springboot" />
-      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.TestWebsiteServiceImpl" />
+      <option name="PACKAGE_NAME" value="com.jin.springboot.service" />
+      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.service.TestWebsiteServiceImpl" />
       <option name="METHOD_NAME" value="testgetById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -179,16 +214,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Maven.springboot_packaging" />
-      <item itemvalue="Spring Boot.StartApplication" />
       <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetAll" />
       <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetById" />
+      <item itemvalue="Maven.springboot_packaging" />
+      <item itemvalue="Spring Boot.StartApplication" />
+      <item itemvalue="JUnit.TestWebsiteController.testgetById" />
+      <item itemvalue="JUnit.TestWebsiteController.test01" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestWebsiteController.test01" />
+        <item itemvalue="JUnit.TestWebsiteController.testgetById" />
+        <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetAll" />
         <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetById" />
         <item itemvalue="Spring Boot.StartApplication" />
-        <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetAll" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +252,8 @@
       <workItem from="1619490974950" duration="15876000" />
       <workItem from="1619577315655" duration="16505000" />
       <workItem from="1619664509662" duration="145000" />
-      <workItem from="1619664706913" duration="10013000" />
+      <workItem from="1619664706913" duration="10362000" />
+      <workItem from="1619749455392" duration="5671000" />
     </task>
     <servers />
   </component>
