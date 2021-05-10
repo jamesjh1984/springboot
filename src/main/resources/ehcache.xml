@@ -1,0 +1,34 @@
+<ehcache name="mycache">
+    <diskStore path="D:\IT\Cache"/>
+
+    <!--
+    name: 缓存名称
+    maxElementsInMemory: 缓存最大数目
+    maxElementsOnDisk： 硬盘最大缓存个数
+    eternal: 对象是否永久有效，一旦设置了，timeout将不起作用
+    overflowToDisk: 当系统宕机时，是否保存到磁盘
+    timeToIdleSeconds: 设置对象在失效前的允许闲置时间，单位为秒
+    memoryStoreEvictionPolicy: 可选策略有
+        FIFO: first in first out, 先进先出。
+        LFU: less frequently used, 最少被访问的。
+        LRU: least recently used, 最少使用的，缓存元素有一个时间戳，当缓存容量满了，又需要腾出地方缓存新元素时，那么现有元素中时间戳离当前时间最远的元素将被清除出缓存。
+    -->
+    <defaultCache maxElementsInMemory="10000"
+                  eternal="false"
+                  timeToIdleSeconds="120"
+                  timeToLiveSeconds="120"
+                  maxElementsOnDisk="10000000"
+                  diskExpiryThreadIntervalSeconds="120"
+                  memoryStoreEvictionPolicy="LRU">
+    </defaultCache>
+
+    <cache name="website"
+           eternal="false"
+           maxElementsInMemory="100"
+           overflowToDisk="false"
+           diskPersistent="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="300"
+           memoryStoreEvictionPolicy="LRU"/>
+
+</ehcache>

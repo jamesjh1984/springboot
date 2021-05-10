@@ -1,7 +1,7 @@
 package com.jin.springboot.config;
 
 
-import com.mchange.v2.c3p0.ComboPooledDataSource;
+//import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.zaxxer.hikari.HikariDataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

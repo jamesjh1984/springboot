@@ -45,19 +45,72 @@ public class WebsiteController {
 
 
 
-    // http://localhost:8080/website/getById/1
+//    // http://localhost:8080/website/getById/1
 //    @RequestMapping("/getById/{id}")
-    @GetMapping("/getById/{id}")
+////    @GetMapping("/getById/{id}")
+//    @ResponseBody // 直接输出json，不跳转
+//    @ApiOperation(value = "website API management => select one website by id")
+//    @ApiImplicitParam(name = "id", value = "website id", required = true, paramType = "path")
+//    public Website getById(@PathVariable Integer id) {
+//        System.out.println("WebsiteController.getById()");
+//        Website website = websiteService.getById(id);
+//
+//        return website;
+//    }
+
+
+
+    // http://localhost:8080/website/getById?id=9
+    @RequestMapping("/getById")
     @ResponseBody // 直接输出json，不跳转
     @ApiOperation(value = "website API management => select one website by id")
     @ApiImplicitParam(name = "id", value = "website id", required = true, paramType = "path")
-    public Website getById(@PathVariable Integer id) {
+    public Website getById(@RequestParam(name = "id") Integer id) {
         System.out.println("WebsiteController.getById()");
         Website website = websiteService.getById(id);
 
         return website;
     }
 
+
+
+
+
+
+    // http://localhost:8080/website/getById2/9
+    @RequestMapping("/getById2/{id}")
+//    @GetMapping("/getById2/{id}")
+    @ResponseBody // 直接输出json，不跳转
+    public Website getById2(@PathVariable Integer id) {
+        System.out.println("WebsiteController.getById2()");
+        Website website = websiteService.getById(id);
+
+        return website;
+    }
+
+
+
+
+
+
+
+
+    // http://localhost:8080/website/deleteById/9
+    @RequestMapping("/deleteById")
+    public String deleteById(Integer id, HttpServletRequest request) {
+
+        // before delete, call getById() to return this row
+        Website website = websiteService.getById(id);
+
+        System.out.println("WebsiteController.deleteById()");
+        websiteService.deleteById(id);
+
+        // items无法遍历会报错误，也就是说，该遍历的必须是一个List，不可以是Object！
+        List<Website> websiteList = new ArrayList<Website>();
+        websiteList.add(website);
+        request.setAttribute("websiteList", websiteList);
+        return "delete success..."; // success.html
+    }
 
 
 
@@ -137,24 +190,7 @@ public class WebsiteController {
 //
 //
 //
-//    // delete one row by id, and return this row to deleteSuccess.jsp
-//    @RequestMapping("/deleteById")
-//    public String deleteById(Integer id, HttpServletRequest request) {
-//
-//        // before delete, call getById() to return this row
-//        Website website = websiteService.getById(id);
-//
-//        System.out.println("WebsiteController.deleteById()");
-//        websiteService.deleteById(id);
-//
-//        // items无法遍历会报错误，也就是说，该遍历的必须是一个List，不可以是Object！
-//        List<Website> websiteList = new ArrayList<Website>();
-//        websiteList.add(website);
-//        request.setAttribute("websiteList", websiteList);
-//        return "success.html"; // success.html
-//    }
-//
-//
+
 
 
 
