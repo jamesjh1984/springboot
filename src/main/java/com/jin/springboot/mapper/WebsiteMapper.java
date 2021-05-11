@@ -23,7 +23,10 @@ public interface WebsiteMapper {
 //    @Delete("delete from website where id=#{id}")
     public void deleteById(@Param("id") Integer id);
 
-//    @Select("select id, name, url, country from website where id=#{id}")
+    //    @Select("select id, name, url, country from website where id=#{id}")
     public Website getById(@Param("id") Integer id);
+
+    //    @Select("select id, name, url, country from website where name=#{name}")
+    public Website getByName(@Param("name") String name);
 
 }

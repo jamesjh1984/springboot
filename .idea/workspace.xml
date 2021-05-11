@@ -73,20 +73,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springmvc_annotation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/thymeleaf-page" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.22241835" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\webjars" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\thymeleaf-page" />
+      <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\upload" />
+      <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\webjars" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\java\com\jin\springboot" />
-      <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\static\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\jsp" />
@@ -96,25 +96,28 @@
       <recent name="com.jin.springboot" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.jin.springboot.config" />
       <recent name="com.jin.springboot.controller" />
+      <recent name="com.jin.springboot.utils" />
+      <recent name="com.jin.springboot.config" />
       <recent name="com.jin.springboot.entity" />
       <recent name="com.jin.springboot.mapper" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.StartApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestWebsiteController.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestFileUploadController.testUpload02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot" />
       <extension name="coverage">
         <pattern>
@@ -123,40 +126,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.jin.springboot.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.controller.TestWebsiteController" />
-      <option name="METHOD_NAME" value="test01" />
+      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.controller.TestFileUploadController" />
+      <option name="METHOD_NAME" value="testUpload02" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestWebsiteController.testgetById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestUploadUtils.getDir" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jin.springboot.controller.*" />
+          <option name="PATTERN" value="com.jin.springboot.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.jin.springboot.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.controller.TestWebsiteController" />
-      <option name="METHOD_NAME" value="testgetById" />
+      <option name="PACKAGE_NAME" value="com.jin.springboot.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.utils.TestUploadUtils" />
+      <option name="METHOD_NAME" value="getDir" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestWebsiteServiceImpl.testgetAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestUploadUtils.getUUIDName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jin.springboot.service.*" />
+          <option name="PATTERN" value="com.jin.springboot.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.jin.springboot.service" />
-      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.service.TestWebsiteServiceImpl" />
-      <option name="METHOD_NAME" value="testgetAll" />
+      <option name="PACKAGE_NAME" value="com.jin.springboot.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.utils.TestUploadUtils" />
+      <option name="METHOD_NAME" value="getUUIDName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -220,20 +223,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetAll" />
       <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetById" />
-      <item itemvalue="JUnit.TestWebsiteController.testgetById" />
-      <item itemvalue="JUnit.TestWebsiteController.test01" />
       <item itemvalue="Maven.springboot_packaging" />
       <item itemvalue="Spring Boot.StartApplication" />
+      <item itemvalue="JUnit.TestUploadUtils.getUUIDName" />
+      <item itemvalue="JUnit.TestUploadUtils.getDir" />
+      <item itemvalue="JUnit.TestFileUploadController.testUpload02" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.StartApplication" />
+        <item itemvalue="JUnit.TestFileUploadController.testUpload02" />
+        <item itemvalue="JUnit.TestUploadUtils.getDir" />
+        <item itemvalue="JUnit.TestUploadUtils.getUUIDName" />
         <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetById" />
-        <item itemvalue="JUnit.TestWebsiteController.test01" />
-        <item itemvalue="JUnit.TestWebsiteController.testgetById" />
-        <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetAll" />
       </list>
     </recent_temporary>
   </component>
@@ -261,6 +264,7 @@
       <workItem from="1619664706913" duration="10362000" />
       <workItem from="1619749455392" duration="5671000" />
       <workItem from="1620627825372" duration="13602000" />
+      <workItem from="1620696082643" duration="29800000" />
     </task>
     <servers />
   </component>

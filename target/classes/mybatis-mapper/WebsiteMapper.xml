@@ -34,4 +34,9 @@
     </select>
 
 
+    <select id="getByName" resultType="com.jin.springboot.entity.Website">
+        select id, name, url, country from website where name=#{name}
+    </select>
+
+
 </mapper>

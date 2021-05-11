@@ -23,6 +23,7 @@ spring:
   thymeleaf:
     prefix: classpath:/thymeleaf-page/
     cache: false
+    suffix: .html
 
 
 

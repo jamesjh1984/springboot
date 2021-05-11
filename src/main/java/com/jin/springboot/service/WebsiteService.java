@@ -16,4 +16,6 @@ public interface WebsiteService {
 
     public Website getById(Integer id);
 
+    public Website getByName(String name);
+
 }

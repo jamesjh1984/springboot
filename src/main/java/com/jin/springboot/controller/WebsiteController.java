@@ -1,6 +1,7 @@
 package com.jin.springboot.controller;
 
 import com.jin.springboot.entity.Website;
+import com.jin.springboot.model.ResultInfo;
 import com.jin.springboot.service.WebsiteService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -13,9 +14,9 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
-
 
 
 @Controller
@@ -45,21 +46,6 @@ public class WebsiteController {
 
 
 
-//    // http://localhost:8080/website/getById/1
-//    @RequestMapping("/getById/{id}")
-////    @GetMapping("/getById/{id}")
-//    @ResponseBody // 直接输出json，不跳转
-//    @ApiOperation(value = "website API management => select one website by id")
-//    @ApiImplicitParam(name = "id", value = "website id", required = true, paramType = "path")
-//    public Website getById(@PathVariable Integer id) {
-//        System.out.println("WebsiteController.getById()");
-//        Website website = websiteService.getById(id);
-//
-//        return website;
-//    }
-
-
-
     // http://localhost:8080/website/getById?id=9
     @RequestMapping("/getById")
     @ResponseBody // 直接输出json，不跳转
@@ -69,6 +55,7 @@ public class WebsiteController {
         System.out.println("WebsiteController.getById()");
         Website website = websiteService.getById(id);
 
+        System.out.println("website => " + website);
         return website;
     }
 
@@ -77,15 +64,73 @@ public class WebsiteController {
 
 
 
-    // http://localhost:8080/website/getById2/9
-    @RequestMapping("/getById2/{id}")
-//    @GetMapping("/getById2/{id}")
+    // http://localhost:8080/website/getByName?iname=Apple
+    @RequestMapping("/getByName")
     @ResponseBody // 直接输出json，不跳转
-    public Website getById2(@PathVariable Integer id) {
-        System.out.println("WebsiteController.getById2()");
-        Website website = websiteService.getById(id);
+    @ApiOperation(value = "website API management => select one website by name")
+    @ApiImplicitParam(name = "id", value = "website id", required = true, paramType = "path")
+    public Website getByName(@RequestParam(name = "name") String name) {
+        System.out.println("WebsiteController.getByName()");
+        Website website = websiteService.getByName(name);
 
+        System.out.println("website => " + website);
         return website;
+    }
+
+
+
+
+
+
+    // update one row by id, and return this row to updateSuccess.jsp
+    @RequestMapping("/updateById")
+    @ResponseBody // 直接输出json，不跳转
+    @ApiOperation(value = "website API management => update one website by id")
+    @ApiImplicitParam(name = "id", value = "website id", required = true)
+    public Website updateById(@RequestParam(name = "id") Integer id,
+                              @RequestParam(name = "name") String name,
+                              @RequestParam(name = "url") String url,
+                              @RequestParam(name = "country") String country) {
+        System.out.println("WebsiteController.updateById()");
+
+        Website website = new Website(id, name, url, country);
+
+        System.out.println(website);
+
+        websiteService.updateById(website);
+
+        Website website1 = websiteService.getById(id);
+
+        System.out.println("website => " + website1);
+        return website1;
+    }
+
+
+
+
+
+    // add one row, and return this row to addSuccess.jsp
+    @RequestMapping("/add")
+    @ResponseBody // 直接输出json，不跳转
+    @ApiOperation(value = "website API management => add one website")
+    @ApiImplicitParam(name = "id", value = "website id", required = true)
+    public List<Website> add(@RequestParam(name = "id") Integer id,
+                             @RequestParam(name = "name") String name,
+                             @RequestParam(name = "url") String url,
+                             @RequestParam(name = "country") String country) {
+        System.out.println("WebsiteController.add()");
+
+        Website website = new Website(id, name, url, country);
+
+        System.out.println(website);
+
+        websiteService.add(website);
+
+        // items无法遍历会报错误，也就是说，该遍历的必须是一个List，不可以是Object！
+        List<Website> websiteList = new ArrayList<Website>();
+        websiteList.add(website);
+
+        return websiteList;
     }
 
 
@@ -97,21 +142,59 @@ public class WebsiteController {
 
     // http://localhost:8080/website/deleteById/9
     @RequestMapping("/deleteById")
-    public String deleteById(Integer id, HttpServletRequest request) {
-
-        // before delete, call getById() to return this row
-        Website website = websiteService.getById(id);
+    @ResponseBody // 直接输出json，不跳转
+    @ApiOperation(value = "website API management => delete one website")
+    @ApiImplicitParam(name = "id", value = "website id", required = true)
+    public List<Website> deleteById(@RequestParam(name = "id") Integer id) {
 
         System.out.println("WebsiteController.deleteById()");
         websiteService.deleteById(id);
 
+        return websiteService.getAll();
+    }
+
+
+
+
+
+
+
+    // add one row, and return this row to addSuccess.jsp
+    @PostMapping("/add02")
+    @ResponseBody // 直接输出json，不跳转
+    @ApiOperation(value = "website API management => add one website")
+    public List<Website> add02(@Valid Website website) { // @Valid: 表示对该参数进行校验
+        System.out.println("WebsiteController.add02()");
+
+        ResultInfo resultInfo = new ResultInfo();
+
+        System.out.println(website);
+
+        websiteService.add(website);
+
         // items无法遍历会报错误，也就是说，该遍历的必须是一个List，不可以是Object！
         List<Website> websiteList = new ArrayList<Website>();
         websiteList.add(website);
-        request.setAttribute("websiteList", websiteList);
-        return "delete success..."; // success.html
+
+        return websiteList;
     }
 
+
+
+
+
+
+
+    // http://localhost:8080/website/getById2/10
+    @RequestMapping("/getById02/{id}")
+//    @GetMapping("/getById02/{id}")
+    @ResponseBody // 直接输出json，不跳转
+    public Website getById02(@PathVariable Integer id) {
+        System.out.println("WebsiteController.getById02()");
+        Website website = websiteService.getById(id);
+
+        return website;
+    }
 
 
 
@@ -135,63 +218,6 @@ public class WebsiteController {
         request.setAttribute("websiteList", websiteList);
         return "getAllSuccess"; // getAllSuccess.jsp
     }
-
-
-
-
-
-
-
-//    // add one row, and return this row to addSuccess.jsp
-//    @RequestMapping("/add")
-//    public String add(Website website, HttpServletRequest request) {
-//        System.out.println("WebsiteController.add()");
-//        websiteService.add(website);
-//
-//        // items无法遍历会报错误，也就是说，该遍历的必须是一个List，不可以是Object！
-//        List<Website> websiteList = new ArrayList<Website>();
-//        websiteList.add(website);
-//        request.setAttribute("websiteList", websiteList);
-//        return "success.html"; // success.html
-//    }
-//
-//
-//
-//
-//
-//    // update one row by id, and return this row to updateSuccess.jsp
-//    @RequestMapping("/updateById")
-//    public String updateById(Website website, HttpServletRequest request) {
-//        System.out.println("WebsiteController.updateById()");
-//        websiteService.updateById(website);
-//
-//        // items无法遍历会报错误，也就是说，该遍历的必须是一个List，不可以是Object！
-//        List<Website> websiteList = new ArrayList<Website>();
-//        websiteList.add(website);
-//        request.setAttribute("websiteList", websiteList);
-//        return "success.html"; // success.html
-//    }
-//
-//
-//
-//    // get one row by id, and return this row to getByIdSuccess.jsp
-//    @RequestMapping("/getById")
-//    public String getById(Integer id, HttpServletRequest request) {
-//        System.out.println("WebsiteController.getById()");
-//        Website website = websiteService.getById(id);
-//
-//        // items无法遍历会报错误，也就是说，该遍历的必须是一个List，不可以是Object！
-//        List<Website> websiteList = new ArrayList<Website>();
-//        websiteList.add(website);
-//        request.setAttribute("websiteList", websiteList);
-//        return "success.html"; // success.html
-//    }
-//
-//
-//
-//
-
-
 
 
 

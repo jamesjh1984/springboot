@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Index</title>
 </head>
 <body>
 
@@ -12,12 +12,10 @@
 <a href="website/getAll">Website getAll()</a>
 
 
-<br><br><br><br>
+<br><br><br><br><hr/>
 
 
 <h3>Website getById()</h3>
-<a href="/website/getById2/9">Website getById2(9)</a><br>
-
 <form action="/website/getById" method="post">
     <table>
         <tr>
@@ -27,7 +25,192 @@
     <input type="submit" value="getById">
 </form>
 
-<br>
+
+<br><br><br><br><hr/>
+
+
+<h3>Website getByName()</h3>
+<form action="/website/getByName" method="post">
+    <table>
+        <tr>
+            <td>ID:</td><td><input type="text" name="name"></td>
+        </tr>
+    </table>
+    <input type="submit" value="getByName">
+</form>
+
+
+<br><br><br><br><hr/>
+
+
+<h3>Website update()</h3>
+<form action="/website/updateById" method="post">
+    <table>
+        <tr>
+            <td>ID:</td><td><input type="text" name="id"></td>
+        </tr>
+        <tr>
+            <td>Name:</td><td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>URL:</td><td><input type="text" name="url"></td>
+        </tr>
+        <tr>
+            <td>Country:</td><td><input type="text" name="country"></td>
+        </tr>
+    </table>
+    <input type="submit" value="update">
+</form>
+
+
+<br><br><br><br><hr/>
+
+
+<h3>Website add()</h3>
+<form action="/website/add" method="post">
+    <table>
+        <tr>
+            <td>ID:</td><td><input type="text" name="id"></td>
+        </tr>
+        <tr>
+            <td>Name:</td><td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>URL:</td><td><input type="text" name="url"></td>
+        </tr>
+        <tr>
+            <td>Country:</td><td><input type="text" name="country"></td>
+        </tr>
+    </table>
+    <input type="submit" value="add">
+</form>
+
+
+<br><br><br><br><hr/>
+
+
+<h3>Website deleteById()</h3>
+<form action="/website/deleteById" method="post">
+    <table>
+        <tr>
+            <td>ID:</td><td><input type="text" name="id"></td>
+        </tr>
+    </table>
+    <input type="submit" value="delete">
+</form>
+
+
+<br><br><br><br><hr/>
+
+
+<h3>Website add02()</h3>
+<form action="/website/add02" method="post">
+    <table>
+        <tr>
+            <td>ID:</td><td><input type="text" name="id"></td>
+        </tr>
+        <tr>
+            <td>Name:</td><td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>URL:</td><td><input type="text" name="url"></td>
+        </tr>
+        <tr>
+            <td>Country:</td><td><input type="text" name="country"></td>
+        </tr>
+    </table>
+    <input type="submit" value="add02">
+</form>
+
+
+<br><br><br><br><hr/>
+
+
+
+
+
+
+
+<!--<h4>16. File Upload 01 (HttpServletRequest)</h4>-->
+<!--<form action="/fileUpload/upload01" method="post" enctype="multipart/form-data">-->
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <td>File Description:</td><td><input type="text" name="fileDesc"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>File:</td><td><input type="file" name="uploadFile"></td>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--    <input type="submit" value="Upload">-->
+<!--</form>-->
+
+<!--<br><br>-->
+<!--<hr/>-->
+
+
+
+
+<!--<h4>17. File Upload 02 (commons-fileupload), can upload xxx.txt and xxx.png</h4>-->
+<!--<form action="/fileUpload/upload02" method="post" enctype="multipart/form-data">-->
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <td>File Description:</td><td><input type="text" name="fileDesc"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>File:</td><td><input type="file" name="uploadFile"></td>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--    <input type="submit" value="Upload">-->
+<!--</form>-->
+
+<!--<br><br>-->
+<!--<hr/>-->
+
+
+
+
+
+
+
+
+<!--<h4>18. File Upload 03 (commons-fileupload), can upload xxx.txt and xxx.png, could generate random directory and file name</h4>-->
+<!--<form action="/fileUpload/upload03" method="post" enctype="multipart/form-data">-->
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <td>File Description:</td><td><input type="text" name="fileDesc"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>File:</td><td><input type="file" name="uploadFile"></td>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--    <input type="submit" value="Upload">-->
+<!--</form>-->
+
+<!--<br><br>-->
+<!--<hr/>-->
+
+
+
+
+
+
+
+<!--<h4>19. File Upload 04 (com.sun.jersey), upload to remote file server</h4>-->
+<!--<form action="/fileUpload/upload04" method="post" enctype="multipart/form-data">-->
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <td>File Description:</td><td><input type="text" name="fileDesc"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>File:</td><td><input type="file" name="uploadFile"></td>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--    <input type="submit" value="Upload">-->
+<!--</form>-->
+
+<!--<br><br>-->
+<!--<hr/>-->
+
 
 
 
