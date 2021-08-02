@@ -47,9 +47,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\IT\Maven\repository" />
-        <option name="mavenHome" value="D:\IT\Maven\apache-maven-3.6.3" />
-        <option name="userSettingsFile" value="D:\IT\Maven\apache-maven-3.6.3\conf\settings.xml" />
+        <option name="localRepository" value="E:\IT\Maven\repository" />
+        <option name="mavenHome" value="E:\IT\Maven\apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="E:\IT\Maven\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -73,12 +73,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/thymeleaf-page" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.22241835" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -104,15 +104,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.StartApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -224,11 +222,11 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetById" />
-      <item itemvalue="Maven.springboot_packaging" />
-      <item itemvalue="Spring Boot.StartApplication" />
       <item itemvalue="JUnit.TestUploadUtils.getUUIDName" />
       <item itemvalue="JUnit.TestUploadUtils.getDir" />
       <item itemvalue="JUnit.TestFileUploadController.testUpload02" />
+      <item itemvalue="Maven.springboot_packaging" />
+      <item itemvalue="Spring Boot.StartApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -265,6 +263,7 @@
       <workItem from="1619749455392" duration="5671000" />
       <workItem from="1620627825372" duration="13602000" />
       <workItem from="1620696082643" duration="29800000" />
+      <workItem from="1627888290307" duration="3588000" />
     </task>
     <servers />
   </component>
