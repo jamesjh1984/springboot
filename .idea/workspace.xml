@@ -47,9 +47,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="E:\IT\Maven\repository" />
-        <option name="mavenHome" value="E:\IT\Maven\apache-maven-3.6.3" />
-        <option name="userSettingsFile" value="E:\IT\Maven\apache-maven-3.6.3\conf\settings.xml" />
+        <option name="localRepository" value="D:\IT\Maven\repository" />
+        <option name="userSettingsFile" value="D:\IT\Maven\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -78,7 +77,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.22241835" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -103,7 +102,46 @@
       <recent name="com.jin.springboot.mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.StartApplication">
+  <component name="RunManager" selected="Application.PhoneVerificationCode">
+    <configuration name="JedisDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.jedis.JedisDemo" />
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jin.springboot.jedis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PhoneVerificationCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.jedis.PhoneVerificationCode" />
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jin.springboot.jedis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimeDateCalenderUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.utils.TimeDateCalenderUtils" />
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jin.springboot.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -115,65 +153,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFileUploadController.testUpload02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestJedisDemo.demo04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jin.springboot.controller.*" />
+          <option name="PATTERN" value="com.jin.springboot.jedis.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.jin.springboot.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.controller.TestFileUploadController" />
-      <option name="METHOD_NAME" value="testUpload02" />
+      <option name="PACKAGE_NAME" value="com.jin.springboot.jedis" />
+      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.jedis.TestJedisDemo" />
+      <option name="METHOD_NAME" value="demo04" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestUploadUtils.getDir" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestJedisDemo.demo05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jin.springboot.utils.*" />
+          <option name="PATTERN" value="com.jin.springboot.jedis.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.jin.springboot.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.utils.TestUploadUtils" />
-      <option name="METHOD_NAME" value="getDir" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestUploadUtils.getUUIDName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jin.springboot.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jin.springboot.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.utils.TestUploadUtils" />
-      <option name="METHOD_NAME" value="getUUIDName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestWebsiteServiceImpl.testgetById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jin.springboot.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jin.springboot.service" />
-      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.service.TestWebsiteServiceImpl" />
-      <option name="METHOD_NAME" value="testgetById" />
+      <option name="PACKAGE_NAME" value="com.jin.springboot.jedis" />
+      <option name="MAIN_CLASS_NAME" value="com.jin.springboot.jedis.TestJedisDemo" />
+      <option name="METHOD_NAME" value="demo05" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -207,34 +213,21 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="StartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="springboot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jin.springboot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jin.springboot.StartApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetById" />
-      <item itemvalue="JUnit.TestUploadUtils.getUUIDName" />
-      <item itemvalue="JUnit.TestUploadUtils.getDir" />
-      <item itemvalue="JUnit.TestFileUploadController.testUpload02" />
       <item itemvalue="Maven.springboot_packaging" />
-      <item itemvalue="Spring Boot.StartApplication" />
+      <item itemvalue="JUnit.TestJedisDemo.demo04" />
+      <item itemvalue="JUnit.TestJedisDemo.demo05" />
+      <item itemvalue="Application.PhoneVerificationCode" />
+      <item itemvalue="Application.JedisDemo" />
+      <item itemvalue="Application.TimeDateCalenderUtils" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.StartApplication" />
-        <item itemvalue="JUnit.TestFileUploadController.testUpload02" />
-        <item itemvalue="JUnit.TestUploadUtils.getDir" />
-        <item itemvalue="JUnit.TestUploadUtils.getUUIDName" />
-        <item itemvalue="JUnit.TestWebsiteServiceImpl.testgetById" />
+        <item itemvalue="Application.PhoneVerificationCode" />
+        <item itemvalue="Application.TimeDateCalenderUtils" />
+        <item itemvalue="Application.JedisDemo" />
+        <item itemvalue="JUnit.TestJedisDemo.demo05" />
+        <item itemvalue="JUnit.TestJedisDemo.demo04" />
       </list>
     </recent_temporary>
   </component>
@@ -264,6 +257,9 @@
       <workItem from="1620627825372" duration="13602000" />
       <workItem from="1620696082643" duration="29800000" />
       <workItem from="1627888290307" duration="3588000" />
+      <workItem from="1627902226755" duration="1559000" />
+      <workItem from="1627904013491" duration="40000" />
+      <workItem from="1627904105014" duration="13910000" />
     </task>
     <servers />
   </component>
