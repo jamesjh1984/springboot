@@ -22,7 +22,11 @@ public class PhoneVerificationCode {
      */
 
 
-    private static String redisHost = "192.168.133.3";
+    /**
+     * x260(桥接): 192.168.31.201
+     * x1(桥接):   192.168.31.200
+     */
+    private static String redisHost = "192.168.31.201";
     private static Integer redisPort = 6379;
     private static Integer codeExpirationSecond = 50;
     private static String DateFormat = "yyyyMMdd";

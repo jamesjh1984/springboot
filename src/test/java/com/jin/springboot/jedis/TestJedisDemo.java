@@ -8,7 +8,11 @@ import java.util.Set;
 
 public class TestJedisDemo {
 
-    String redisHost = "192.168.133.3";
+    /**
+     * x260(桥接): 192.168.31.201
+     * x1(桥接):   192.168.31.200
+     */
+    String redisHost = "192.168.31.201";
     Integer redisPort = 6379;
 
 
