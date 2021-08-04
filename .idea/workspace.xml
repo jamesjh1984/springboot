@@ -102,7 +102,7 @@
       <recent name="com.jin.springboot.mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PhoneVerificationCode">
+  <component name="RunManager" selected="Spring Boot.StartApplication">
     <configuration name="JedisDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jin.springboot.jedis.JedisDemo" />
       <module name="springboot" />
@@ -142,13 +142,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -213,19 +215,27 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="StartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jin.springboot.StartApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Maven.springboot_packaging" />
-      <item itemvalue="JUnit.TestJedisDemo.demo04" />
-      <item itemvalue="JUnit.TestJedisDemo.demo05" />
       <item itemvalue="Application.PhoneVerificationCode" />
       <item itemvalue="Application.JedisDemo" />
       <item itemvalue="Application.TimeDateCalenderUtils" />
+      <item itemvalue="JUnit.TestJedisDemo.demo04" />
+      <item itemvalue="JUnit.TestJedisDemo.demo05" />
+      <item itemvalue="Maven.springboot_packaging" />
+      <item itemvalue="Spring Boot.StartApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JedisDemo" />
         <item itemvalue="Application.PhoneVerificationCode" />
         <item itemvalue="Application.TimeDateCalenderUtils" />
-        <item itemvalue="Application.JedisDemo" />
         <item itemvalue="JUnit.TestJedisDemo.demo05" />
         <item itemvalue="JUnit.TestJedisDemo.demo04" />
       </list>
@@ -260,6 +270,9 @@
       <workItem from="1627902226755" duration="1559000" />
       <workItem from="1627904013491" duration="40000" />
       <workItem from="1627904105014" duration="13910000" />
+      <workItem from="1628044676752" duration="1151000" />
+      <workItem from="1628047992780" duration="418000" />
+      <workItem from="1628059507316" duration="4901000" />
     </task>
     <servers />
   </component>

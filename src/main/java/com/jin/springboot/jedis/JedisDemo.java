@@ -20,13 +20,19 @@ public class JedisDemo {
      */
     public static void main(String[] args) {
 
-        String redisHost = "192.168.133.3";
+        String redisHost = "192.168.23.3";
         Integer redisPort = 6379;
 
         //创建Jedis对象
         Jedis jedis = new Jedis(redisHost, redisPort);
 
-        //测试连接Redis能否成功，若报错，还需关闭Linux上的防火墙
+        /**
+         * 测试连接Redis能否成功，若报错，还需关闭Linux(CentOS7)上的防火墙
+         *
+         * 查看状态：firewall-cmd --state
+         * 停止firewall：systemctl stop firewalld.service
+         * 禁止firewall开机启动：systemctl disable firewalld.service
+         */
         String value = jedis.ping();
         System.out.println(value); // should return "PONG"
 
