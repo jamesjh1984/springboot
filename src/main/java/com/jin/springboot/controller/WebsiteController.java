@@ -189,8 +189,6 @@ public class WebsiteController {
 
         Map<String, Object> map = new HashMap<String, Object>();
 
-        System.out.println("id => " + id);
-
 //        in参数赋值
         map.put("id", id);
 //        out参数赋值

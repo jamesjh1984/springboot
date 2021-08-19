@@ -1,3 +1,11 @@
+CREATE SCHEMA `james` ;
+
+----------------------------------------------------------------
+
+import website.csv
+
+----------------------------------------------------------------
+
 delimiter $$
 drop procedure if exists james.get_all_websites;
 create procedure james.get_all_websites()
@@ -5,14 +13,6 @@ begin
 SELECT id, name, url, country FROM james.website ORDER BY id;
 end
 $$
-
-
-call james.get_all_websites();
-
-
-
-----------------------------------------------------------------
-
 
 
 delimiter $$
@@ -24,10 +24,10 @@ begin
 SELECT id, name, url, country FROM james.website where id = pi_id ORDER BY id;
 end $$
 
+----------------------------------------------------------------
 
+call james.get_all_websites();
 call james.get_website_by_id(1);
-
-
 
 ----------------------------------------------------------------
 
