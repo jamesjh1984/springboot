@@ -73,7 +73,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.22241835" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -271,6 +271,8 @@
       <workItem from="1628044676752" duration="1151000" />
       <workItem from="1628047992780" duration="418000" />
       <workItem from="1628059507316" duration="4901000" />
+      <workItem from="1629180155341" duration="1931000" />
+      <workItem from="1629352258489" duration="8361000" />
     </task>
     <servers />
   </component>

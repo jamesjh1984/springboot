@@ -3,19 +3,29 @@ package com.jin.springboot.service;
 import com.jin.springboot.entity.Website;
 
 import java.util.List;
+import java.util.Map;
 
 public interface WebsiteService {
 
-    public List<Website> getAll();
+    List<Website> getAll();
 
-    public void add(Website website);
+    void add(Website website);
 
-    public void updateById(Website website);
+    void updateById(Website website);
 
-    public void deleteById(Integer id);
+    void deleteById(Integer id);
 
-    public Website getById(Integer id);
+    Website getById(Integer id);
 
-    public Website getByName(String name);
+    Website getByName(String name);
+
+
+
+
+    //    MySql Stored Procedure, call james.get_all_websites();
+    List<Website> getAllWebsites();
+
+    //    MySql Stored Procedure, call james.get_website_by_id();
+    List<Website> getWebsiteById(Map<String, Object> map);
 
 }

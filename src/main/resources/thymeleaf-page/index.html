@@ -130,91 +130,27 @@
 
 
 
-
-<!--<h4>16. File Upload 01 (HttpServletRequest)</h4>-->
-<!--<form action="/fileUpload/upload01" method="post" enctype="multipart/form-data">-->
-<!--    <table>-->
-<!--        <tr>-->
-<!--            <td>File Description:</td><td><input type="text" name="fileDesc"></td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>File:</td><td><input type="file" name="uploadFile"></td>-->
-<!--        </tr>-->
-<!--    </table>-->
-<!--    <input type="submit" value="Upload">-->
-<!--</form>-->
-
-<!--<br><br>-->
-<!--<hr/>-->
-
-
-
-
-<!--<h4>17. File Upload 02 (commons-fileupload), can upload xxx.txt and xxx.png</h4>-->
-<!--<form action="/fileUpload/upload02" method="post" enctype="multipart/form-data">-->
-<!--    <table>-->
-<!--        <tr>-->
-<!--            <td>File Description:</td><td><input type="text" name="fileDesc"></td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>File:</td><td><input type="file" name="uploadFile"></td>-->
-<!--        </tr>-->
-<!--    </table>-->
-<!--    <input type="submit" value="Upload">-->
-<!--</form>-->
-
-<!--<br><br>-->
-<!--<hr/>-->
+<h3>Website getAllWebsites()</h3>
+<p>MySql Stored Procedure, call james.get_all_websites();</p>
+<a href="website/getAllWebsites">Website getAllWebsites()</a>
 
 
 
 
 
+<br><br><br><br><hr/>
 
 
-
-<!--<h4>18. File Upload 03 (commons-fileupload), can upload xxx.txt and xxx.png, could generate random directory and file name</h4>-->
-<!--<form action="/fileUpload/upload03" method="post" enctype="multipart/form-data">-->
-<!--    <table>-->
-<!--        <tr>-->
-<!--            <td>File Description:</td><td><input type="text" name="fileDesc"></td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>File:</td><td><input type="file" name="uploadFile"></td>-->
-<!--        </tr>-->
-<!--    </table>-->
-<!--    <input type="submit" value="Upload">-->
-<!--</form>-->
-
-<!--<br><br>-->
-<!--<hr/>-->
-
-
-
-
-
-
-
-<!--<h4>19. File Upload 04 (com.sun.jersey), upload to remote file server</h4>-->
-<!--<form action="/fileUpload/upload04" method="post" enctype="multipart/form-data">-->
-<!--    <table>-->
-<!--        <tr>-->
-<!--            <td>File Description:</td><td><input type="text" name="fileDesc"></td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <td>File:</td><td><input type="file" name="uploadFile"></td>-->
-<!--        </tr>-->
-<!--    </table>-->
-<!--    <input type="submit" value="Upload">-->
-<!--</form>-->
-
-<!--<br><br>-->
-<!--<hr/>-->
-
-
-
-
-
+<h3>Website getById()</h3>
+<p>MySql Stored Procedure, call james.get_website_by_id();</p>
+<form action="/website/getWebsiteById" method="post">
+    <table>
+        <tr>
+            <td>ID:</td><td><input type="text" name="id"></td>
+        </tr>
+    </table>
+    <input type="submit" value="getWebsiteById">
+</form>
 
 
 

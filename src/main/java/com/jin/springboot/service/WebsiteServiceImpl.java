@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 
 //@Component("websiteService")
 @Service("websiteService")
@@ -103,5 +104,41 @@ public class WebsiteServiceImpl implements WebsiteService {
         websiteMapper.deleteById(id);
 //        int a=1/0; // 为了测试事务控制，加入的代码
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    MySql Stored Procedure, call james.get_all_websites();
+    @Override
+    @Cacheable(value = "website") // 第一次不会去缓存中取，第二次之后会根据key去缓存中取，找不到再执行下面的方法
+    public List<Website> getAllWebsites() {
+        System.out.println("Get from Mybatis, not Cache, WebsiteServiceImpl.getAllWebsites()");
+
+        List<Website> websites = websiteMapper.getAllWebsites();
+        return websites;
+    }
+
+
+
+
+//    MySql Stored Procedure, call james.get_website_by_id();
+    @Override
+    @Cacheable(value = "website", key = "'map[0].id'") // 第一次不会去缓存中取，第二次之后会根据key去缓存中取，找不到再执行下面的方法
+    public List<Website> getWebsiteById(Map<String, Object> map) {
+        System.out.println("Get from Mybatis, not Cache, WebsiteServiceImpl.getWebsiteById()");
+        List<Website> website = websiteMapper.getWebsiteById(map);
+        return website;
+    }
+
 
 }

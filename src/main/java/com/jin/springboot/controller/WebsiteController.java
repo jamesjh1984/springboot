@@ -3,9 +3,11 @@ package com.jin.springboot.controller;
 import com.jin.springboot.entity.Website;
 import com.jin.springboot.model.ResultInfo;
 import com.jin.springboot.service.WebsiteService;
+import com.mysql.cj.MysqlType;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import oracle.jdbc.OracleTypes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +18,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @Controller
@@ -152,6 +156,53 @@ public class WebsiteController {
 
         return websiteService.getAll();
     }
+
+
+
+
+
+    // http://localhost:8080/website/getAllWebsites
+    @RequestMapping("/getAllWebsites")
+    @ResponseBody // 直接输出json，不跳转
+    @ApiOperation(value = "website API management => call MySql SP james.get_all_websites(), return all websites")
+    public List<Website> getAllWebsites() {
+        System.out.println("WebsiteController.getAllWebsites()...");
+
+        List<Website> websiteResult = websiteService.getAllWebsites();
+
+        System.out.println("websiteResult => " + websiteResult);
+        return websiteResult;
+    }
+
+
+
+
+
+
+
+    // http://localhost:8080/website/getWebsiteById
+    @RequestMapping("/getWebsiteById")
+    @ResponseBody // 直接输出json，不跳转
+    @ApiOperation(value = "website API management => call MySql SP james.get_website_by_id(), return all websites")
+    public List<Website> getWebsiteById(@RequestParam(name = "id") Integer id) {
+        System.out.println("WebsiteController.getWebsiteById()...");
+
+        Map<String, Object> map = new HashMap<String, Object>();
+
+        System.out.println("id => " + id);
+
+//        in参数赋值
+        map.put("id", id);
+//        out参数赋值
+//        map.put("result", OracleTypes.CURSOR);
+//        map.put("result", MysqlType.JSON);
+
+        List<Website> websiteResult = websiteService.getWebsiteById(map);
+
+        System.out.println("websiteResult => " + websiteResult);
+        return websiteResult;
+    }
+
 
 
 

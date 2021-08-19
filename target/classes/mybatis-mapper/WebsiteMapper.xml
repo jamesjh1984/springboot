@@ -39,4 +39,28 @@
     </select>
 
 
+
+
+
+
+    <!-- MySql Stored Procedure -->
+    <resultMap id="cursorMap" type="com.jin.springboot.entity.Website">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="url" property="url"/>
+        <result column="county" property="county"/>
+    </resultMap>
+
+    <!-- MySql Stored Procedure, call james.get_all_websites(); -->
+    <select id="getAllWebsites" parameterType="java.util.Map" statementType="CALLABLE" resultMap="cursorMap">
+        {call james.get_all_websites()}
+    </select>
+
+    <!-- MySql Stored Procedure, call james.get_website_by_id(); -->
+    <select id="getWebsiteById" parameterType="java.util.Map" statementType="CALLABLE" resultMap="cursorMap">
+        {call james.get_website_by_id(
+            #{id, mode=IN, jdbcType=INTEGER}
+        )}
+    </select>
+
 </mapper>

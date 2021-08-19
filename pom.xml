@@ -113,12 +113,25 @@
     </dependency>
 
 
-    <!-- c3p0, 数据源 -->
+
+
+    <!-- Oracle 11g driver -->
 <!--    <dependency>-->
-<!--      <groupId>com.mchange</groupId>-->
-<!--      <artifactId>c3p0</artifactId>-->
-<!--      <version>0.9.5.2</version>-->
+<!--      <groupId>com.oracle</groupId>-->
+<!--      <artifactId>ojdbc6</artifactId>-->
+<!--      <version>11.2.0.3</version>-->
 <!--    </dependency>-->
+
+
+
+    <!-- Oracle 19c driver -->
+    <dependency>
+      <groupId>com.oracle.database.jdbc</groupId>
+      <artifactId>ojdbc8</artifactId>
+      <version>19.8.0.0</version>
+    </dependency>
+
+
 
 
     <!-- springfox-swagger2, 实现API文档生成功能，供前端开发调用 -->
