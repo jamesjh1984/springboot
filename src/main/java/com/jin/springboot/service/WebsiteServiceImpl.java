@@ -141,4 +141,33 @@ public class WebsiteServiceImpl implements WebsiteService {
     }
 
 
+
+
+
+
+
+//    Oracle Stored Procedure, call e519013.pkg_website.get_all_websites(po_websites OUT SYS_REFCURSOR);
+//    @Override
+//    @Cacheable(value = "website", key = "'map'") // 第一次不会去缓存中取，第二次之后会根据key去缓存中取，找不到再执行下面的方法
+//    public List<Website> getAllWebsites(Map<String, Object> map) {
+//        System.out.println("Get from Mybatis, not Cache, WebsiteServiceImpl.getAllWebsites()");
+//        websiteMapper.getAllWebsites(map);
+//        // 根据key获取结果集，进行强制转换
+//        List<Website> websites = (List<Website>) map.get("result");
+//        return websites;
+//    }
+
+
+//    Oracle Stored Procedure, call e519013.pkg_website.get_website_by_id(pi_id IN INTEGER, po_websites OUT SYS_REFCURSOR);
+//    @Override
+//    @Cacheable(value = "website", key = "'map[0].id'") // 第一次不会去缓存中取，第二次之后会根据key去缓存中取，找不到再执行下面的方法
+//    public List<Website> getWebsiteById(Map<String, Object> map) {
+//        System.out.println("Get from Mybatis, not Cache, WebsiteServiceImpl.getWebsiteById()");
+//        websiteMapper.getAllWebsites(map);
+//        // 根据key获取结果集，进行强制转换
+//        List<Website> website = (List<Website>) map.get("result");
+//        return website;
+//    }
+
+
 }

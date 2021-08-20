@@ -175,11 +175,6 @@ public class WebsiteController {
     }
 
 
-
-
-
-
-
     // http://localhost:8080/website/getWebsiteById
     @RequestMapping("/getWebsiteById")
     @ResponseBody // 直接输出json，不跳转
@@ -200,6 +195,62 @@ public class WebsiteController {
         System.out.println("websiteResult => " + websiteResult);
         return websiteResult;
     }
+
+
+
+
+
+
+
+
+    // http://localhost:8080/website/getAllWebsites
+//    @RequestMapping("/getAllWebsites")
+//    @ResponseBody // 直接输出json，不跳转
+//    @ApiOperation(value = "website API management => call Oracle SP e519013.pkg_website.get_all_websites(po_websites OUT SYS_REFCURSOR);
+//    public List<Website> getAllWebsites() {
+//        System.out.println("WebsiteController.getAllWebsites()...");
+//
+//        Map<String, Object> map = new HashMap<String, Object>();
+//
+////        in参数赋值
+//        map.put("id", id);
+////        out参数赋值
+//        map.put("result", OracleTypes.CURSOR);
+//
+//        List<Website> websiteResult = websiteService.getAllWebsites(map);
+//
+//        System.out.println("websiteResult => " + websiteResult);
+//        return websiteResult;
+//    }
+
+
+    // http://localhost:8080/website/getWebsiteById
+//    @RequestMapping("/getWebsiteById")
+//    @ResponseBody // 直接输出json，不跳转
+//    @ApiOperation(value = "website API management => call Oracle SP e519013.pkg_website.get_website_by_id(pi_id IN INTEGER, po_websites OUT SYS_REFCURSOR);
+//    public List<Website> getWebsiteById(@RequestParam(name = "id") Integer id) {
+//        System.out.println("WebsiteController.getWebsiteById()...");
+//
+//        Map<String, Object> map = new HashMap<String, Object>();
+//
+////        in参数赋值
+//        map.put("id", id);
+////        out参数赋值
+//        map.put("result", OracleTypes.CURSOR);
+//
+//        List<Website> websiteResult = websiteService.getWebsiteById(map);
+//
+//        System.out.println("websiteResult => " + websiteResult);
+//        return websiteResult;
+//    }
+
+
+
+
+
+
+
+
 
 
 

@@ -142,6 +142,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestJedisDemo.demo04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot" />
       <extension name="coverage">
@@ -264,6 +275,7 @@
       <workItem from="1629352258489" duration="8361000" />
       <workItem from="1629378553429" duration="775000" />
       <workItem from="1629381817715" duration="2735000" />
+      <workItem from="1629428419212" duration="6708000" />
     </task>
     <servers />
   </component>
