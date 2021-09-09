@@ -77,7 +77,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.22241835" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -102,7 +102,7 @@
       <recent name="com.jin.springboot.mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.StartApplication">
+  <component name="RunManager" selected="Application.PhoneVerificationCode">
     <configuration name="JedisDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jin.springboot.jedis.JedisDemo" />
       <module name="springboot" />
@@ -231,8 +231,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JedisDemo" />
         <item itemvalue="Application.PhoneVerificationCode" />
+        <item itemvalue="Application.JedisDemo" />
         <item itemvalue="Application.TimeDateCalenderUtils" />
         <item itemvalue="JUnit.TestJedisDemo.demo05" />
         <item itemvalue="JUnit.TestJedisDemo.demo04" />
@@ -276,6 +276,8 @@
       <workItem from="1629378553429" duration="775000" />
       <workItem from="1629381817715" duration="2735000" />
       <workItem from="1629428419212" duration="6708000" />
+      <workItem from="1631200690411" duration="704000" />
+      <workItem from="1631201412179" duration="303000" />
     </task>
     <servers />
   </component>

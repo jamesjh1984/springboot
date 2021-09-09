@@ -23,10 +23,10 @@ public class PhoneVerificationCode {
 
 
     /**
-     * x260(桥接): 192.168.31.201
-     * x1(桥接):   192.168.31.200
+     * x260(桥接): 192.168.31.206
+     * x1(桥接):   192.168.31.xxx
      */
-    private static String redisHost = "192.168.31.201";
+    private static String redisHost = "192.168.31.206";
     private static Integer redisPort = 6379;
     private static Integer codeExpirationSecond = 50;
     private static String DateFormat = "yyyyMMdd";
@@ -46,7 +46,7 @@ public class PhoneVerificationCode {
 //        generateCode("13900000000");
 
         // 2. verify验证码，若验证码过期，返回NullPointerException
-        verifyCode("13900000000","814760");
+        verifyCode("13900000000","827201");
 
     }
 

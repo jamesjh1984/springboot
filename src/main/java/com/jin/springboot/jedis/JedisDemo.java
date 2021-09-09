@@ -21,10 +21,10 @@ public class JedisDemo {
     public static void main(String[] args) {
 
         /**
-         * x260(桥接): 192.168.31.201
-         * x1(桥接):   192.168.31.200
+         * x260(桥接): 192.168.31.206
+         * x1(桥接):   192.168.31.xxx
          */
-        String redisHost = "192.168.31.201";
+        String redisHost = "192.168.31.206";
         Integer redisPort = 6379;
 
         //创建Jedis对象
