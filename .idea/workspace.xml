@@ -102,7 +102,7 @@
       <recent name="com.jin.springboot.mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PhoneVerificationCode">
+  <component name="RunManager" selected="Spring Boot.StartApplication">
     <configuration name="JedisDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jin.springboot.jedis.JedisDemo" />
       <module name="springboot" />
@@ -277,7 +277,7 @@
       <workItem from="1629381817715" duration="2735000" />
       <workItem from="1629428419212" duration="6708000" />
       <workItem from="1631200690411" duration="704000" />
-      <workItem from="1631201412179" duration="303000" />
+      <workItem from="1631201412179" duration="921000" />
     </task>
     <servers />
   </component>
