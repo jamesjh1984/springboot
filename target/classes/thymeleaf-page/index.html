@@ -103,23 +103,31 @@
 <br><br><br><br><hr/>
 
 
-<h3>Website add02()</h3>
-<form action="/website/add02" method="post">
+
+
+
+
+
+<h3>MySql Website getAllWebsites()</h3>
+<p>MySql Stored Procedure, call james.get_all_websites();</p>
+<a href="website/mysqlGetAllWebsites">Website getAllWebsites()</a>
+
+
+
+
+
+<br><br><br><br><hr/>
+
+
+<h3>MySql Website getById()</h3>
+<p>MySql Stored Procedure, call james.get_website_by_id();</p>
+<form action="/website/mysqlGetWebsiteById" method="post">
     <table>
         <tr>
             <td>ID:</td><td><input type="text" name="id"></td>
         </tr>
-        <tr>
-            <td>Name:</td><td><input type="text" name="name"></td>
-        </tr>
-        <tr>
-            <td>URL:</td><td><input type="text" name="url"></td>
-        </tr>
-        <tr>
-            <td>Country:</td><td><input type="text" name="country"></td>
-        </tr>
     </table>
-    <input type="submit" value="add02">
+    <input type="submit" value="getWebsiteById">
 </form>
 
 
@@ -130,9 +138,9 @@
 
 
 
-<h3>Website getAllWebsites()</h3>
-<p>MySql Stored Procedure, call james.get_all_websites();</p>
-<a href="website/getAllWebsites">Website getAllWebsites()</a>
+<h3>Oracle 19c Website getAllWebsites()</h3>
+<p>Oracle 19c Stored Procedure, call c##e519013.pkg_website.get_all_websites(po_websites OUT SYS_REFCURSOR);</p>
+<a href="website/oracleGetAllWebsites">Website getAllWebsites()</a>
 
 
 
@@ -141,9 +149,9 @@
 <br><br><br><br><hr/>
 
 
-<h3>Website getById()</h3>
-<p>MySql Stored Procedure, call james.get_website_by_id();</p>
-<form action="/website/getWebsiteById" method="post">
+<h3>Oracle 19c Website getById()</h3>
+<p>Oracle 19c Stored Procedure, c##e519013.pkg_website.get_website_by_id(pi_id IN INTEGER, po_websites OUT SYS_REFCURSOR);</p>
+<form action="/website/oracleGetWebsiteById" method="post">
     <table>
         <tr>
             <td>ID:</td><td><input type="text" name="id"></td>

@@ -1,7 +1,6 @@
 package com.jin.springboot.config;
 
 
-//import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.zaxxer.hikari.HikariDataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,19 +14,19 @@ import org.springframework.context.annotation.Primary;
 import javax.sql.DataSource;
 
 @Configuration
-public class DataSourceConfig {
+public class MysqlDataSourceConfig {
 
-    private static Logger logger = LoggerFactory.getLogger(DataSourceConfig.class);
+    private static Logger logger = LoggerFactory.getLogger(MysqlDataSourceConfig.class);
 
 
     /**
-     * HikariCP数据源
+     * Mysql 主数据源
      *
      */
-    @Bean(name="HikariCP_dataSource")
+    @Bean(name="MysqlDataSource")
     @Primary
-    @ConfigurationProperties(prefix = "spring.datasource.hikari")
-    public DataSource dataSource(DataSourceProperties properties) {
+    @ConfigurationProperties(prefix = "spring.datasource.primary")
+    public DataSource mysqlDataSource(DataSourceProperties properties) {
 
         HikariDataSource hikariDataSource = DataSourceBuilder.create(properties.getClassLoader())
                 .type(HikariDataSource.class).driverClassName(properties.getDriverClassName())
@@ -44,21 +43,6 @@ public class DataSourceConfig {
         return hikariDataSource;
     }
 
-
-
-
-
-
-    /**
-     * c3p0数据源
-     *
-     */
-//    @Bean(name="c3p0_dataSource1")
-////    @Primary
-//    @ConfigurationProperties(prefix = "c3p0")
-//    public DataSource dataSource() {
-//        return DataSourceBuilder.create().type(ComboPooledDataSource.class).build();
-//    }
 
 
 }

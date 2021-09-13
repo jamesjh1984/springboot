@@ -95,9 +95,9 @@
       <recent name="com.jin.springboot" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jin.springboot.config" />
       <recent name="com.jin.springboot.controller" />
       <recent name="com.jin.springboot.utils" />
-      <recent name="com.jin.springboot.config" />
       <recent name="com.jin.springboot.entity" />
       <recent name="com.jin.springboot.mapper" />
     </key>
@@ -277,7 +277,9 @@
       <workItem from="1629381817715" duration="2735000" />
       <workItem from="1629428419212" duration="6708000" />
       <workItem from="1631200690411" duration="704000" />
-      <workItem from="1631201412179" duration="921000" />
+      <workItem from="1631201412179" duration="1153000" />
+      <workItem from="1631447901150" duration="1408000" />
+      <workItem from="1631510874727" duration="12413000" />
     </task>
     <servers />
   </component>

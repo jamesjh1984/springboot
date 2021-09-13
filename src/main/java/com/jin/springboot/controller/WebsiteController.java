@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 
+// http://localhost:8080/index
 @Controller
 @RequestMapping("/website")
 @Api(tags = "website API management")
@@ -161,26 +162,28 @@ public class WebsiteController {
 
 
 
-    // http://localhost:8080/website/getAllWebsites
-    @RequestMapping("/getAllWebsites")
+    // http://localhost:8080/website/mysqlGetAllWebsites
+    @RequestMapping("/mysqlGetAllWebsites")
     @ResponseBody // 直接输出json，不跳转
     @ApiOperation(value = "website API management => call MySql SP james.get_all_websites(), return all websites")
-    public List<Website> getAllWebsites() {
-        System.out.println("WebsiteController.getAllWebsites()...");
+    public List<Website> mysqlGetAllWebsites() {
+        System.out.println("WebsiteController.mysqlGetAllWebsites()...");
 
-        List<Website> websiteResult = websiteService.getAllWebsites();
+        List<Website> websiteResult = websiteService.mysqlGetAllWebsites();
 
         System.out.println("websiteResult => " + websiteResult);
         return websiteResult;
     }
 
 
-    // http://localhost:8080/website/getWebsiteById
-    @RequestMapping("/getWebsiteById")
+    // http://localhost:8080/website/mysqlGetWebsiteById
+    @RequestMapping("/mysqlGetWebsiteById")
     @ResponseBody // 直接输出json，不跳转
     @ApiOperation(value = "website API management => call MySql SP james.get_website_by_id(), return all websites")
-    public List<Website> getWebsiteById(@RequestParam(name = "id") Integer id) {
-        System.out.println("WebsiteController.getWebsiteById()...");
+    public List<Website> mysqlGetWebsiteById(@RequestParam(name = "id") Integer id) {
+        System.out.println("WebsiteController.mysqlGetWebsiteById()...");
+
+        System.out.println("id => " + id);
 
         Map<String, Object> map = new HashMap<String, Object>();
 
@@ -190,7 +193,7 @@ public class WebsiteController {
 //        map.put("result", OracleTypes.CURSOR);
 //        map.put("result", MysqlType.JSON);
 
-        List<Website> websiteResult = websiteService.getWebsiteById(map);
+        List<Website> websiteResult = websiteService.mysqlGetWebsiteById(map);
 
         System.out.println("websiteResult => " + websiteResult);
         return websiteResult;
@@ -203,121 +206,50 @@ public class WebsiteController {
 
 
 
-    // http://localhost:8080/website/getAllWebsites
-//    @RequestMapping("/getAllWebsites")
-//    @ResponseBody // 直接输出json，不跳转
-//    @ApiOperation(value = "website API management => call Oracle SP e519013.pkg_website.get_all_websites(po_websites OUT SYS_REFCURSOR);
-//    public List<Website> getAllWebsites() {
-//        System.out.println("WebsiteController.getAllWebsites()...");
-//
-//        Map<String, Object> map = new HashMap<String, Object>();
-//
-////        in参数赋值
-//        map.put("id", id);
-////        out参数赋值
-//        map.put("result", OracleTypes.CURSOR);
-//
-//        List<Website> websiteResult = websiteService.getAllWebsites(map);
-//
-//        System.out.println("websiteResult => " + websiteResult);
-//        return websiteResult;
-//    }
-
-
-    // http://localhost:8080/website/getWebsiteById
-//    @RequestMapping("/getWebsiteById")
-//    @ResponseBody // 直接输出json，不跳转
-//    @ApiOperation(value = "website API management => call Oracle SP e519013.pkg_website.get_website_by_id(pi_id IN INTEGER, po_websites OUT SYS_REFCURSOR);
-//    public List<Website> getWebsiteById(@RequestParam(name = "id") Integer id) {
-//        System.out.println("WebsiteController.getWebsiteById()...");
-//
-//        Map<String, Object> map = new HashMap<String, Object>();
-//
-////        in参数赋值
-//        map.put("id", id);
-////        out参数赋值
-//        map.put("result", OracleTypes.CURSOR);
-//
-//        List<Website> websiteResult = websiteService.getWebsiteById(map);
-//
-//        System.out.println("websiteResult => " + websiteResult);
-//        return websiteResult;
-//    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // add one row, and return this row to addSuccess.jsp
-    @PostMapping("/add02")
+    // http://localhost:8080/website/oracleGetAllWebsites
+    @RequestMapping("/oracleGetAllWebsites")
     @ResponseBody // 直接输出json，不跳转
-    @ApiOperation(value = "website API management => add one website")
-    public List<Website> add02(@Valid Website website) { // @Valid: 表示对该参数进行校验
-        System.out.println("WebsiteController.add02()");
+    @ApiOperation(value = "website API management => call Oracle SP c##e519013.pkg_website.get_all_websites(po_websites OUT SYS_REFCURSOR")
+    public List<Website> oracleGetAllWebsites() {
+        System.out.println("WebsiteController.oracleGetAllWebsites()...");
 
-        ResultInfo resultInfo = new ResultInfo();
+        Map<String, Object> map = new HashMap<String, Object>();
 
-        System.out.println(website);
+//        in参数赋值
+//        map.put("id", id);
+//        out参数赋值
+        map.put("result", OracleTypes.CURSOR);
 
-        websiteService.add(website);
+        List<Website> websiteResult = websiteService.oracleGetAllWebsites(map);
 
-        // items无法遍历会报错误，也就是说，该遍历的必须是一个List，不可以是Object！
-        List<Website> websiteList = new ArrayList<Website>();
-        websiteList.add(website);
-
-        return websiteList;
+        System.out.println("websiteResult => " + websiteResult);
+        return websiteResult;
     }
 
 
-
-
-
-
-
-    // http://localhost:8080/website/getById2/10
-    @RequestMapping("/getById02/{id}")
-//    @GetMapping("/getById02/{id}")
+    // http://localhost:8080/website/oracleGetWebsiteById
+    @RequestMapping("/oracleGetWebsiteById")
     @ResponseBody // 直接输出json，不跳转
-    public Website getById02(@PathVariable Integer id) {
-        System.out.println("WebsiteController.getById02()");
-        Website website = websiteService.getById(id);
+    @ApiOperation(value = "website API management => call Oracle SP c##e519013.pkg_website.get_website_by_id(pi_id IN INTEGER, po_websites OUT SYS_REFCURSOR")
+    public List<Website> oracleGetWebsiteById(@RequestParam(name = "id") Integer id) {
+        System.out.println("WebsiteController.oracleGetWebsiteById()...");
 
-        return website;
+        System.out.println("id => " + id);
+
+        Map<String, Object> map = new HashMap<String, Object>();
+
+//        in参数赋值
+        map.put("id", id);
+//        out参数赋值
+        map.put("result", OracleTypes.CURSOR);
+
+        List<Website> websiteResult = websiteService.oracleGetWebsiteById(map);
+
+        System.out.println("websiteResult => " + websiteResult);
+        return websiteResult;
     }
 
 
-
-
-
-
-
-
-    /**
-     * 以下是跳转页面的代码，还没解决
-     */
-
-    // http://localhost:8080/website/getAll02, 暂时还没解决跳转取值的问题
-    @RequestMapping("/getAll02")
-    public String getAll02(HttpServletRequest request) {
-        System.out.println("WebsiteController.getAll02()");
-
-        List<Website> websiteList = websiteService.getAll();
-        System.out.println("websiteList => " + websiteList);
-
-        request.setAttribute("websiteList", websiteList);
-        return "getAllSuccess"; // getAllSuccess.jsp
-    }
 
 
 

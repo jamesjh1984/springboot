@@ -39,23 +39,45 @@ spring:
 
 
 
-  #### HikariCP 数据源 ####
+  #### HikariCP Mysql 主数据源 ####
   datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/james?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-    username: root
-    password: jamesjh1984
-    schemaUsername: james
-    hikari:
-      pool-name: James_HikariCP
-      minimum-idle: 20
-      maximum-pool-size: 100
-      idle-timeout: 600000
-      auto-commit: true
-      max-lifetime: 1800000
-      connection-timeout: 30000
-      leak-detection-threshold: 30000
+    primary:
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/james?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      username: root
+      password: jamesjh1984
+      schemaUsername: james
+      hikari:
+        pool-name: Mysql_HikariCP
+        minimum-idle: 20
+        maximum-pool-size: 100
+        idle-timeout: 600000
+        auto-commit: true
+        max-lifetime: 1800000
+        connection-timeout: 30000
+        leak-detection-threshold: 30000
+
+
+
+
+  #### HikariCP Oracle 次数据源 ####
+    secondary:
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+      jdbc-url: jdbc:oracle:thin:@//localhost:1521/orcl
+      username: c##e519013
+      password: Time_20210913$
+      schemaUsername: c##e519013
+      hikari:
+        pool-name: Oracle_HikariCP
+        minimum-idle: 20
+        maximum-pool-size: 100
+        idle-timeout: 600000
+        auto-commit: true
+        max-lifetime: 1800000
+        connection-timeout: 30000
+        leak-detection-threshold: 30000
 
 
 

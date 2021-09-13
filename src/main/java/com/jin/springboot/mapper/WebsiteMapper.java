@@ -35,19 +35,19 @@ public interface WebsiteMapper {
 
 
 //    MySql Stored Procedure, call james.get_all_websites();
-    List<Website> getAllWebsites();
+    List<Website> mysqlGetAllWebsites();
 
 //    MySql Stored Procedure, call james.get_website_by_id();
-    List<Website> getWebsiteById(Map<String, Object> map);
+    List<Website> mysqlGetWebsiteById(Map<String, Object> map);
 
 
 
 
-//    Oracle Stored Procedure, call e519013.pkg_website.get_all_websites(po_websites OUT SYS_REFCURSOR);
-//    List<Website> getAllWebsites(Map<String, Object> map);
+//    Oracle Stored Procedure, call c##e519013.pkg_website.get_all_websites(po_websites OUT SYS_REFCURSOR);
+    List<Website> oracleGetAllWebsites(Map<String, Object> map);
 
-//    Oracle Stored Procedure, call e519013.pkg_website.get_website_by_id(pi_id IN INTEGER, po_websites OUT SYS_REFCURSOR);
-//    List<Website> getWebsiteById(Map<String, Object> map);
+//    Oracle Stored Procedure, call c##e519013.pkg_website.get_website_by_id(pi_id IN INTEGER, po_websites OUT SYS_REFCURSOR);
+    List<Website> oracleGetWebsiteById(Map<String, Object> map);
 
 
 }
