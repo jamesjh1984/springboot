@@ -72,7 +72,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mybatis-mapper" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.22241835" />
@@ -81,11 +81,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\mybatis-mapper" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\thymeleaf-page" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\upload" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\webjars" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources" />
-      <recent name="D:\IT\Projects\GitHub\springboot\src\main\java\com\jin\springboot" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\jsp" />
@@ -142,13 +142,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -279,7 +281,8 @@
       <workItem from="1631200690411" duration="704000" />
       <workItem from="1631201412179" duration="1153000" />
       <workItem from="1631447901150" duration="1408000" />
-      <workItem from="1631510874727" duration="12413000" />
+      <workItem from="1631510874727" duration="12919000" />
+      <workItem from="1631585998596" duration="12444000" />
     </task>
     <servers />
   </component>

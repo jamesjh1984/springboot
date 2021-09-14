@@ -41,7 +41,7 @@ spring:
 
   #### HikariCP Mysql 主数据源 ####
   datasource:
-    primary:
+    mysql:
       type: com.zaxxer.hikari.HikariDataSource
       driver-class-name: com.mysql.cj.jdbc.Driver
       jdbc-url: jdbc:mysql://localhost:3306/james?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
@@ -58,11 +58,8 @@ spring:
         connection-timeout: 30000
         leak-detection-threshold: 30000
 
-
-
-
   #### HikariCP Oracle 次数据源 ####
-    secondary:
+    oracle:
       type: com.zaxxer.hikari.HikariDataSource
       driver-class-name: oracle.jdbc.driver.OracleDriver
       jdbc-url: jdbc:oracle:thin:@//localhost:1521/orcl
@@ -77,7 +74,9 @@ spring:
         auto-commit: true
         max-lifetime: 1800000
         connection-timeout: 30000
+        connect-test-query: SELECT 1 FROM DUAL
         leak-detection-threshold: 30000
+        cache-prep-stmts: true
 
 
 
