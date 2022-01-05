@@ -22,7 +22,7 @@ public class DataSourceConfig {
 
 
     /**
-     * Mysql 主数据源
+     * Mysql 数据源
      */
     @Bean(name="mysqlDataSource")
 //    @Primary
@@ -51,10 +51,10 @@ public class DataSourceConfig {
 
 
     /**
-     * Oracle 次数据源
+     * Oracle 数据源
      */
     @Bean(name="oracleDataSource")
-    @Primary
+//    @Primary
     @ConfigurationProperties(prefix = "spring.datasource.oracle")
     DataSource oracleDataSource(DataSourceProperties properties) {
         HikariDataSource oracleDataSource = DataSourceBuilder.create(properties.getClassLoader())
@@ -69,6 +69,33 @@ public class DataSourceConfig {
         oracleDataSource.addDataSourceProperty("verifyServerCertificate",false);
 
         return oracleDataSource;
+    }
+
+
+
+
+
+
+
+    /**
+     * PostgreSQL 数据源
+     */
+    @Bean(name="postgresqlDataSource")
+    @Primary
+    @ConfigurationProperties(prefix = "spring.datasource.postgresql")
+    DataSource postgresqlDataSource(DataSourceProperties properties) {
+        HikariDataSource postgresqlDataSource = DataSourceBuilder.create(properties.getClassLoader())
+                .type(HikariDataSource.class).driverClassName(properties.getDriverClassName())
+                .url(properties.getUrl()).username(properties.getUsername())
+                .password(properties.getPassword()).build();
+
+        postgresqlDataSource.addDataSourceProperty("cachePrepStmts",true);
+        postgresqlDataSource.addDataSourceProperty("prepStmtCacheSize",250);
+        postgresqlDataSource.addDataSourceProperty("prepStmtCacheSqlLimit",2048);
+        postgresqlDataSource.addDataSourceProperty("useServerPrepStmts",true);
+        postgresqlDataSource.addDataSourceProperty("verifyServerCertificate",false);
+
+        return postgresqlDataSource;
     }
 
 }

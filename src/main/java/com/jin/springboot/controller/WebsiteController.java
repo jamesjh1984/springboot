@@ -23,6 +23,9 @@ import java.util.List;
 import java.util.Map;
 
 
+
+
+
 // http://localhost:8080/index
 @Controller
 @RequestMapping("/website")
@@ -251,6 +254,51 @@ public class WebsiteController {
 
 
 
+
+
+
+
+
+
+
+
+    // http://localhost:8080/website/postgresqlGetAllWebsites
+    @RequestMapping("/postgresqlGetAllWebsites")
+    @ResponseBody // 直接输出json，不跳转
+    @ApiOperation(value = "website API management => call PostgreSQL function get_all_websites(), return all websites")
+    public List<Website> postgresqlGetAllWebsites() {
+        System.out.println("WebsiteController.postgresqlGetAllWebsites()...");
+
+        List<Website> websiteResult = websiteService.postgresqlGetAllWebsites();
+
+        System.out.println("websiteResult => " + websiteResult);
+        return websiteResult;
+    }
+
+
+
+    // http://localhost:8080/website/postgresqlGetWebsiteById
+    @RequestMapping("/postgresqlGetWebsiteById")
+    @ResponseBody // 直接输出json，不跳转
+    @ApiOperation(value = "website API management => call PostgreSQL function get_website_by_id(p_id integer), return all websites")
+    public List<Website> postgresqlGetWebsiteById(@RequestParam(name = "id") Integer id) {
+        System.out.println("WebsiteController.postgresqlGetWebsiteById()...");
+
+        System.out.println("id => " + id);
+
+        Map<String, Object> map = new HashMap<String, Object>();
+
+//        in参数赋值
+        map.put("id", id);
+//        out参数赋值
+//        map.put("result", OracleTypes.CURSOR);
+//        map.put("result", MysqlType.JSON);
+
+        List<Website> websiteResult = websiteService.postgresqlGetWebsiteById(map);
+
+        System.out.println("websiteResult => " + websiteResult);
+        return websiteResult;
+    }
 
 
 

@@ -170,4 +170,42 @@ public class WebsiteServiceImpl implements WebsiteService {
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    PostgreSQL function, call get_all_websites();
+    @Override
+    @Cacheable(value = "website") // 第一次不会去缓存中取，第二次之后会根据key去缓存中取，找不到再执行下面的方法
+    public List<Website> postgresqlGetAllWebsites() {
+        System.out.println("Get from Mybatis, not Cache, WebsiteServiceImpl.postgresqlGetAllWebsites()");
+
+        List<Website> websites = websiteMapper.postgresqlGetAllWebsites();
+        return websites;
+    }
+
+
+
+    //    PostgreSQL function, call get_website_by_id(p_id integer);
+    @Override
+    @Cacheable(value = "website", key = "'map[0].id'") // 第一次不会去缓存中取，第二次之后会根据key去缓存中取，找不到再执行下面的方法
+    public List<Website> postgresqlGetWebsiteById(Map<String, Object> map) {
+        System.out.println("Get from Mybatis, not Cache, WebsiteServiceImpl.postgresqlGetWebsiteById()");
+        List<Website> website = websiteMapper.postgresqlGetWebsiteById(map);
+        return website;
+    }
+
+
+
+
+
 }

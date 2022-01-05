@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Map;
 
+
 //@Component
 @Repository("websiteMapper")
 public interface WebsiteMapper {
@@ -24,10 +25,10 @@ public interface WebsiteMapper {
 //    @Delete("delete from website where id=#{id}")
     void deleteById(@Param("id") Integer id);
 
-    //    @Select("select id, name, url, country from website where id=#{id}")
+//    @Select("select id, name, url, country from website where id=#{id}")
     Website getById(@Param("id") Integer id);
 
-    //    @Select("select id, name, url, country from website where name=#{name}")
+//    @Select("select id, name, url, country from website where name=#{name}")
     Website getByName(@Param("name") String name);
 
 
@@ -48,6 +49,16 @@ public interface WebsiteMapper {
 
 //    Oracle Stored Procedure, call c##e519013.pkg_website.get_website_by_id(pi_id IN INTEGER, po_websites OUT SYS_REFCURSOR);
     List<Website> oracleGetWebsiteById(Map<String, Object> map);
+
+
+
+
+//    PostgreSQL function, call get_all_websites();
+    List<Website> postgresqlGetAllWebsites();
+
+//    PostgreSQL function, call get_website_by_id(p_id integer);
+    List<Website> postgresqlGetWebsiteById(Map<String, Object> map);
+
 
 
 }

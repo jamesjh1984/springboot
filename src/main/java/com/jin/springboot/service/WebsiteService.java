@@ -37,4 +37,15 @@ public interface WebsiteService {
     //    Oracle Stored Procedure, call c##e519013.pkg_website.get_website_by_id(pi_id IN INTEGER, po_websites OUT SYS_REFCURSOR);
     List<Website> oracleGetWebsiteById(Map<String, Object> map);
 
+
+
+
+
+    //    PostgreSQL function, call get_all_websites();
+    List<Website> postgresqlGetAllWebsites();
+
+    //    MySql Stored Procedure, call get_website_by_id(p_id integer);
+    List<Website> postgresqlGetWebsiteById(Map<String, Object> map);
+
+
 }

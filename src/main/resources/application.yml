@@ -78,6 +78,28 @@ spring:
         leak-detection-threshold: 30000
         cache-prep-stmts: true
 
+  #### HikariCP PostgreSQL 数据源 ####
+    postgresql:
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://localhost:5432/james
+      username: postgres
+      password: postgres
+      schemaUsername: postgres
+      hikari:
+        pool-name: PostgreSQL_HikariCP
+        minimum-idle: 20
+        maximum-pool-size: 100
+        idle-timeout: 600000
+        auto-commit: true
+        max-lifetime: 1800000
+        connection-timeout: 30000
+        leak-detection-threshold: 30000
+
+
+
+
+
 
 
   #### ehcache缓存 ####

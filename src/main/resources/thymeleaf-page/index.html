@@ -9,7 +9,7 @@
 
 
 <h3>Website getAll()</h3>
-<a href="website/getAll">Website getAll()</a>
+<a href="website/getAll">Website - getAllWebsites()</a>
 
 
 <br><br><br><br><hr/>
@@ -109,8 +109,8 @@
 
 
 <h3>MySql Website getAllWebsites()</h3>
-<p>MySql Stored Procedure, call james.get_all_websites();</p>
-<a href="website/mysqlGetAllWebsites">Website getAllWebsites()</a>
+<p>MySql Procedure, call james.get_all_websites();</p>
+<a href="website/mysqlGetAllWebsites">Website - getAllWebsites()</a>
 
 
 
@@ -120,7 +120,7 @@
 
 
 <h3>MySql Website getById()</h3>
-<p>MySql Stored Procedure, call james.get_website_by_id();</p>
+<p>MySql Procedure, call james.get_website_by_id();</p>
 <form action="/website/mysqlGetWebsiteById" method="post">
     <table>
         <tr>
@@ -140,7 +140,7 @@
 
 <h3>Oracle 19c Website getAllWebsites()</h3>
 <p>Oracle 19c Stored Procedure, call c##e519013.pkg_website.get_all_websites(po_websites OUT SYS_REFCURSOR);</p>
-<a href="website/oracleGetAllWebsites">Website getAllWebsites()</a>
+<a href="website/oracleGetAllWebsites">Website - getAllWebsites()</a>
 
 
 
@@ -160,6 +160,36 @@
     <input type="submit" value="getWebsiteById">
 </form>
 
+
+
+<br><br><br><br><hr/>
+
+
+
+
+
+
+
+<h3>PostgreSQL Website getAllWebsites()</h3>
+<p>PostgreSQL Function, call get_all_websites();</p>
+<a href="website/postgresqlGetAllWebsites">Website - getAllWebsites()</a>
+
+
+
+
+<br><br><br><br><hr/>
+
+
+<h3>PostgreSQL Website getById()</h3>
+<p>PostgreSQL Function, call get_website_by_id(p_id integer);</p>
+<form action="/website/postgresqlGetWebsiteById" method="post">
+    <table>
+        <tr>
+            <td>ID:</td><td><input type="text" name="id"></td>
+        </tr>
+    </table>
+    <input type="submit" value="getWebsiteById">
+</form>
 
 
 
