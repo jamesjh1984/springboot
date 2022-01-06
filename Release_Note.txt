@@ -1,9 +1,8 @@
-springboot+mybatis(call SP)+swagger2+HikariCP+junit test+ehcache+Quartz+Redis
-
+springboot+mybatis+Oracle/Mysql/PostgreSQL+swagger2+HikariCP+junit test+ehcache+Quartz+Redis
 
 
 springboot
-mybatis(操作数据库)，call Mysql(Oracle) stored procedure
+mybatis(操作数据库)，call Oracle+Mysql+PostgreSQL procedure/function
 swagger2(api 生成器)
 HikariCP(数据源 连接池)
 junit test

@@ -66,13 +66,13 @@
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="15" />
-    <property name="RequestMappingsPanelWidth1" value="15" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mybatis-mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.22241835" />
@@ -81,11 +81,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IT\Projects\GitHub\springboot" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\mybatis-mapper" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\thymeleaf-page" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\upload" />
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\webjars" />
-      <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IT\Projects\GitHub\springboot\src\main\resources\jsp" />
@@ -138,6 +138,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -273,6 +284,7 @@
       <workItem from="1631698651593" duration="855000" />
       <workItem from="1641383350861" duration="7936000" />
       <workItem from="1641392954846" duration="191000" />
+      <workItem from="1641435437638" duration="4717000" />
     </task>
     <servers />
   </component>

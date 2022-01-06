@@ -1,0 +1,52 @@
+File -> Preference -> Binary paths:
+C:\Program Files\PostgreSQL\10\bin
+
+----------------------------------------------------------------
+
+import website.csv
+
+----------------------------------------------------------------
+
+drop function if exists get_all_websites();
+
+create or replace function get_all_websites()
+returns table(id integer,
+              name varchar(255),
+              url varchar(255),
+              country varchar(255)
+             )
+language plpgsql
+as $$
+begin
+    return query SELECT t.id, t.name, t.url, t.country FROM website t ORDER BY t.id;
+end
+$$
+
+----------------------------------------------------------------
+
+drop function if exists get_website_by_id(p_id integer);
+
+create or replace function get_website_by_id(p_id integer)
+returns table(id integer,
+              name varchar(255),
+              url varchar(255),
+              country varchar(255)
+             )
+language plpgsql
+as $$
+begin
+    return query SELECT t.id, t.name, t.url, t.country
+				 FROM website t
+				 WHERE t.id = p_id
+				 ORDER BY t.id;
+end
+$$
+
+----------------------------------------------------------------
+
+select get_all_websites();
+select get_website_by_id(1);
+
+----------------------------------------------------------------
+
+
