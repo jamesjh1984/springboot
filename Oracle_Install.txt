@@ -1,0 +1,155 @@
+-- create user
+create user c##e519013 identified by xxxxxx default tablespace users temporary tablespace temp;
+
+
+-- grant
+grant unlimited tablespace, create user, drop user, alter user, create any view, connect,resource,dba, create session, create any sequence to c##e519013;
+grant unlimited tablespace to system;
+
+
+----------------------------------------------------------------
+
+
+create table c##e519013.website
+(
+id number not null,
+name nvarchar2(200) not null,
+url nvarchar2(2000) not null,
+country nvarchar2(200) not null
+)
+tablespace users;
+
+
+
+alter table c##e519013.website add constraint pky_wbs_id primary key(id)
+using index tablespace users;
+
+alter table c##e519013.website add constraint aky_wbs_name unique(name)
+using index tablespace users;
+
+
+
+SELECT *
+FROM   c##e519013.website;
+
+
+----------------------------------------------------------------
+
+-- ALTER SESSION SET CURRENT_SCHEMA = c##e519013;
+
+
+ALTER TABLE website DISABLE ALL TRIGGERS;
+DELETE FROM website;
+COMMIT;
+
+
+INSERT INTO website
+  (id,
+   NAME,
+   url,
+   country)
+VALUES
+  (800000,
+   'Apple',
+   'www.apple.com',
+   'US');
+
+INSERT INTO website
+  (id,
+   NAME,
+   url,
+   country)
+VALUES
+  (800001,
+   'Google',
+   'www.google.com',
+   'US');
+
+INSERT INTO website
+  (id,
+   NAME,
+   url,
+   country)
+VALUES
+  (800002,
+   'Tesla',
+   'www.tesla.com',
+   'US');
+
+
+
+COMMIT;
+ALTER TABLE website ENABLE ALL TRIGGERS;
+
+
+----------------------------------------------------------------
+
+
+-- ALTER SESSION SET CURRENT_SCHEMA = c##e519013;
+
+
+CREATE OR REPLACE PACKAGE pkg_website AS
+
+  PROCEDURE get_all_websites(po_websites OUT SYS_REFCURSOR);
+
+  PROCEDURE get_website_by_id
+  (
+    pi_id       IN INTEGER,
+    po_websites OUT SYS_REFCURSOR
+  );
+
+END pkg_website;
+/
+
+
+
+
+CREATE OR REPLACE PACKAGE BODY pkg_website AS
+
+  PROCEDURE get_all_websites(po_websites OUT SYS_REFCURSOR) AS
+  BEGIN
+
+    OPEN po_websites FOR
+      SELECT id,
+             NAME,
+             url,
+             country
+      FROM   website
+      ORDER  BY id;
+
+  END get_all_websites;
+
+
+
+
+  PROCEDURE get_website_by_id
+  (
+    pi_id       IN INTEGER,
+    po_websites OUT SYS_REFCURSOR
+  ) AS
+  BEGIN
+
+    OPEN po_websites FOR
+      SELECT id,
+             NAME,
+             url,
+             country
+      FROM   website
+      WHERE  id = pi_id
+      ORDER  BY id;
+
+  END get_website_by_id;
+
+
+END pkg_website;
+/
+
+
+----------------------------------------------------------------
+
+call pkg_website.get_all_websites();
+call pkg_website.get_website_by_id(800002);
+
+----------------------------------------------------------------
+
+
